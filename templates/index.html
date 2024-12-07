@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blood bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+
+<body style="overflow-x: hidden;">
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="#"><span style="color: rgb(218, 22, 22); font-size: larger; "><b>BLOOD</b></span><span style="color: rgb(2, 2, 2); font-size: larger; margin-bottom: 10px;"><b>BANK</b></span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 400px;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#learn">Learn</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#services">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SIGN Up
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'Cus_reg' %}"> USER</a></li>
+              <li><a class="dropdown-item" href="{% url 'bb_reg' %}">DON0R</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'loginpage' %}" style=" font-weight: bold;">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!--page1-->
+   <div class="one" id="home">
+         <div class="home">
+          <h2><b>DONATE BLOOD AND SAVE A LIFE</b></h2>
+          <h1> DONATE YOUR BLOOD AND INSPIRE  <br>
+           OTHERS TO DONATE.</h1>
+           <a href="#services"><button type="button" class="btn btn-danger" style="margin-left:600px;margin-top:30px;width:140px;height:40px; " >Register Now</button></a>
+
+         </div>
+   </div>
+
+
+   <!--page2-->
+
+   <div class="learn" id="learn">
+    <div >
+        <div class="pic"><img src="https://media.istockphoto.com/id/178540946/photo/male-and-female-transfused-patients.jpg?s=612x612&w=0&k=20&c=Q09Y4nxK0NgoXzWmqYPlrXDlIDK8h4fubCNrSOmL2_Q=" alt="no"></div>
+    </div>
+    <div >
+        <div class="why">
+            <h2>Why donate blood?</h2>
+            <div class="db">
+              <h6>Everyday,there are many emergency cases or other treatments <br> that requried
+                blood.But unfortunately,the requirement of blood is <br> exponentially more than
+                its supply.This,at times,leads to loss of life. <br>An act of kindness and a selfless
+                services of donating blood can a <br>big difference and save and prolong
+                someone's life. </h6>
+
+            </div>
+
+        </div>
+        <div style="margin-top:30px;">
+        <span style="font-size: 30px;  margin-left: 175px;  font-family: 'Times New Roman', Times, serif;" > Donor Eligibility </span>
+
+        <div class="circle-container" style="margin-top: 50px;margin-left:150px;">
+         <div class="circle">
+             Age
+             <div class="definition">You must be between 18 and 65 years old to donate blood.</div>
+         </div>
+
+         <div class="circle">
+             Health
+             <div class="definition">Generally good health; no serious medical conditions.</div>
+         </div>
+
+         <div class="circle">
+             Weight
+             <div class="definition">Minimum weight requirement is 50 kg to donate blood</div>
+         </div>
+
+         <div class="circle">
+             Medical History
+             <div class="definition">No history of certain diseases or infections (e.g., HIV).</div>
+         </div>
+
+         <div class="circle">
+             Lifestyle
+             <div class="definition">Avoid high-risk behaviors (like drug use).</div>
+         </div>
+
+         <div class="circle">
+             Pregnancy
+             <div class="definition">Cannot donate while pregnant or shortly after.</div>
+         </div>
+
+         <div class="circle">
+             Donation Interval
+             <div class="definition">Typically, you can donate every 8 weeks (56 days).</div>
+         </div>
+        </div>
+
+    </div>
+   </div>
+
+  </div>
+
+ <!--tips-->
+ <div class="tips" style="margin-top:10px">
+  <h2>Blood Donation Tips</h2>
+  <p class="subheading">Here are some tips to put your mind at ease during the blood donation process</p>
+
+  <div class="tips-sections">
+      <div class="tips-box">
+          <h2>The day before</h2>
+          <ul>
+              <li>Have an iron-rich diet such as beans, spinach, or meat, poultry.</li>
+              <li>Have a proper sleep of at least 8 hours.</li>
+              <li>Include more liquids in your diet.</li>
+          </ul>
+      </div>
+      <div class="tips-box">
+          <h2>On the Donation day</h2>
+          <ul>
+              <li>Do carry your identification forms, e.g., driver’s license.</li>
+              <li>Drink 2 cups of water before donating blood.</li>
+              <li>Wear a half sleeve shirt so you can easily roll it up.</li>
+          </ul>
+      </div>
+      <div class="tips-box">
+          <h2>After the Donation</h2>
+          <ul>
+
+              <li>Drink more liquids over a period of 24 hours.</li>
+              <li>Remove the bandage after a few hours.</li>
+              <li>Don’t do vigorous workout & give your body rest.</li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+  <!--service-->
+
+  <section id="services" class="services-section" style="margin-top: 70px;">
+    <div class="service">
+        <h2 class="main-heading">Our Services</h2>
+
+        <!-- Combined Service Card with Need Blood and Donate Blood sections -->
+        <div class="service-card">
+
+            <!-- Need Blood Section -->
+            <div class="service-section">
+                <div class="service-content" style="margin-left: 200px;">
+                    <h3>Need Blood</h3>
+                    <p>Register with us to ensure quick access to life-saving support when you or someone you care about needs blood. Once registered, you’ll be able to submit requests for blood easily, specifying the blood type and urgency. Our system will connect your request to available donors in the network, prioritizing safety and quick response times.</p>
+                    <a href="{% url 'Cus_reg' %}" class="btn">Request Blood</a>
+                </div>
+                <img src="https://www.shutterstock.com/image-photo/blood-transfusion-young-woman-patient-600nw-1961274448.jpg" alt="Need Blood" class="service-image">
+            </div>
+
+            <!-- Donate Blood Section -->
+            <div class="service-section" >
+                <img src="https://www.shutterstock.com/image-photo/smiling-transfused-patient-lying-on-600nw-107831225.jpg" alt="Donate Blood" class="service-image">
+                <div class="service-content" style="margin-right: 200px;">
+                    <h3>Donate Blood</h3>
+                    <p>Become a lifesaver by joining our network of compassionate blood donors. When you donate blood, you’re helping to replenish critical supplies, supporting hospitals and patients in urgent need. By giving just a little of your time, you can make an enormous difference in the lives of patients and families facing critical health challenges.</p>
+                    <a href="{% url 'bb_reg' %}" class="btn">Donate Now</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ <!--page5-->
+  <div class="picture" id="gallery">
+    <h3 >Our  Gallery</h3>
+    <div class="Gallery">
+      <img id="img1" src="https://ahduni.edu.in/site/assets/files/4653/87259dsc02399-1.1600x0.1400x0.webp" alt="Blood Donation Event" />
+      <img id="img2" src="https://hartek.com/assets/media/press/1690783083_Hartek.jpg" alt="Community Blood Drive" />
+      <img id="img3" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/01/29/783772-blood-donation-camp-03.jpg" alt="Blood Donation at Hospital" />
+      <img id="img4" src="https://www.livemint.com/lm-img/img/2023/06/13/600x338/Blood_Donation_1686691682853_1686691683079.jpg" alt="Blood Donation Camp" />
+      <img id="img5" src="https://m.economictimes.com/thumb/msid-76384859,width-1200,height-900,resizemode-4,imgsize-219145/blood-donation-mumbai-pti.jpg" alt="Types of Blood Donation" />
+      <img id="img6" src="https://cdnuploads.aa.com.tr/uploads/Contents/2021/06/14/thumbs_b_c_eb249bf52626b2671716d957397936fd.jpg?v=165010" alt="Blood Donation Camp" />
+      <img id="img7" src="https://marvel-b1-cdn.bc0a.com/f00000000290269/www.riversideonline.com/-/media/patients-and-visitors/healthy-you/types-of-blood-donation.jpg" alt="Blood Donation Drive" />
+      <img id="img8" src="https://healthcare-in-europe.com/media/story_section_image/1600/image-01-blood-donation.jpg" alt="Blood Donation Camp" />
+
+    </div>
+  </div>
+
+
+<!--about us-->
+
+<section  class="byee" style="margin-top: 50px;" id="aboutus">
+  <div class="about-container">
+    <h4 class="about-container_img">
+      <img src="https://media.istockphoto.com/id/1403182301/photo/preparation-for-blood-test-by-female-doctor-medical-uniform-on-the-table-in-white-bright-room.jpg?s=612x612&w=0&k=20&c=U5lfNS8V5aIVrQ4jxd6ST-ayXWXDfV4biSYWdBxGZbQ=" alt="A picture of whatever">
+    </h4>
+    <div class="about-container_info">
+      <div class="abo" style="margin-bottom: 150px;">
+        <h1 class="about-heading" style="color: brown; margin-left: 300px; margin-top: 50px;">About Us</h1>
+
+        <p class="about-container_text"><p style="margin-left:70px ; color:rgb(92, 90, 90);font-family: 'Times New Roman', Times, serif;">Welcome to the Blood Bank Management System, a platform dedicated to saving lives through the life-changing act of blood donation. Our mission is to connect compassionate donors with patients in urgent need, ensuring timely access to vital blood supplies during critical moments.
+
+We believe in the power of community and the difference a single act of kindness can make. Through our easy-to-use platform, patients or their representatives can submit blood requests, specifying essential details like blood type, units needed, and the required date. Once verified, these requests are promptly shared with our network of registered donors who are ready to step forward and help.
+
+By bridging the gap between donors and patients, we strive to enhance patient care, reduce wait times, and create a healthier, stronger society. Join us in our commitment to saving lives because together, we can ensure that no one faces a critical moment without the support they need.
+             </p> </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--page7-->
+<footer class="hero" style="margin-top:50px;">
+    <div class="container flex">
+        <div class="container__about">
+            <h2><span style="color: rgb(218, 22, 22); font-size: larger; "><b>BLOOD</b></span><span style="color: rgb(243, 242, 242); font-size: larger; margin-bottom: 10px;"><b>BANK</b></span></h2>
+            <p>BloodBank connects patients with compatible donors, reducing critical wait times and potentially saving lives.</p>
+        </div>
+        <div class="container-pages flex" style="gap: 50px;">
+
+
+            <div class="container__recentpages">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="container__recentpages">
+              <h2>Get in Touch</h2>
+              <ul>
+                  <li class="bi bi-telephone"><a href="https://brayancountries.netlify.app">  +910000000000</a></li>
+                  <li class="bi bi-envelope"> <a href="https://portfolio-brayan.netlify.app/">  bloodbank@gmail.com</a></li>
+                  <li class="bi bi-geo-alt"><a href="https://work-company.netlify.app/">  Kerala,India</a></li>
+              </ul>
+          </div>
+
+
+        </div>
+    </div>
+    <div class="line__separete"></div>
+    <div class="by flex">
+        <p>Copyright © 2024 All Rights Reserved by BloodBank.</p>
+        <div class="icons">
+            <a href="https://t.co/VBNNTjtw3F" class="icon1 icon--instagram">
+                <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" class="icon1 icon--twitter">
+                <i class="ri-twitter-line"></i>
+            </a>
+            <a href="linkedin.com/in/brayan-ospina-8bb472243" class="icon1 icon--linkedin">
+                <i class="ri-linkedin-line"></i>
+            </a>
+
+        </div>
+    </div>
+
+</footer>
+
+<script>
+
+document.addEventListener("scroll", function() {
+  const tipsBoxes = document.querySelectorAll(".tips-box");
+
+  tipsBoxes.forEach((box) => {
+      const boxPosition = box.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight;
+
+      if (boxPosition < screenPosition) {
+          box.classList.add("visible");
+      }
+  });
+});
+</script>
+
+</body>
+</html>

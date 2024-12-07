@@ -1,0 +1,88 @@
+{% extends 'bloodbankpage.html' %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>donors homepage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+
+
+
+         #welcome{
+            background-image: url("https://t3.ftcdn.net/jpg/05/04/36/84/360_F_504368477_XGrt6brpAmFWPfjWGnPJD9bLU6Gi35yG.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+         .image img{
+            width:800px;
+         }
+         .profile p{
+
+         }
+         .picture img{
+         width:150px;
+         height:150px;
+         margin-left:40px
+         }
+
+    </style>
+</head>
+<body>
+<div style="">
+        <div class="card" style="width: 62rem;height:500px;margin-left:50px">
+            <div class="card-body" id="welcome" >
+              <h3 class="card-title" style="font-size:50px;margin-top:50px;color:brown;">Welcome, <span style="font-size:30px">{{ request.user.Bloodbank.Name }}</span>  !</h3>
+              <p class="card-text" style="font-size: 16px;">
+Thank you for your kindness and generosity! <br> Your support as a donor helps save lives and brings  hope <br>to those in need. We are grateful for your contribution and <br> proud to have you as part of our community. Together, we <br> make a difference!</p>
+               <a href="{% url 'Dview_profile' %}" ><button type="submit"  class="btn btn-secondary">view profile</button></a>
+            </div>
+<!--            <div class="image"><img src="https://www.shutterstock.com/image-vector/people-blood-donation-concept-volunteers-600nw-2465102413.jpg" alt="no"></div>-->
+          </div>
+
+<!--         <div style="display:flex;">-->
+
+<!--              <div>-->
+<!--                  <a href="{% url 'View_request' %}">-->
+<!--                    <div class="card" style="width: 15rem;height:100px;margin-left:50px;margin-top:10px;">-->
+<!--                        <div class="card-body"  >-->
+<!--                          <h3 class="card-title" style="font-size: 18px;color:black;">Blood Requests</h3>-->
+<!--                         <p class="card-text" style="font-size: 16px;color:black;">{{ total_bloodrequest }}</p>-->
+<!--                         </div>-->
+<!--                     </div>-->
+<!--                 </a>-->
+<!--              </div>-->
+<!--             <div>-->
+<!--                  <a href="{% url 'Donor_History' %}">-->
+<!--                    <div class="card" style="width: 15rem;height:100px;margin-left:50px;margin-top:10px;">-->
+<!--                        <div class="card-body"  >-->
+<!--                          <h3 class="card-title" style="font-size: 18px;color:black;">Request Accepted</h3>-->
+<!--                         <p class="card-text" style="font-size: 16px;color:black;"></p>-->
+<!--                         </div>-->
+<!--                     </div>-->
+<!--                 </a>-->
+<!--              </div>-->
+<!--             <div>-->
+<!--                  <a href="{% url 'View_request' %}">-->
+<!--                    <div class="card" style="width: 15rem;height:100px;margin-left:50px;margin-top:10px;">-->
+<!--                        <div class="card-body"  >-->
+<!--                          <h3 class="card-title" style="font-size: 18px;color:black;">Blood Requests</h3>-->
+<!--                         <p class="card-text" style="font-size: 16px;color:black;">{{ total_bloodrequest }}</p>-->
+<!--                         </div>-->
+<!--                     </div>-->
+<!--                 </a>-->
+<!--              </div>-->
+<!--         </div>-->
+
+
+
+
+
+
+</body>
+</html>
+
+{% endblock %}

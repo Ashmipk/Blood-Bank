@@ -1,0 +1,115 @@
+{% extends 'userpage.html' %}
+{% block content %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+   <table style="border-spacing: 50px;" class="table table-hover">
+       <tr >
+           <th scope="col" >SI NO</th>
+           <th scope="col">PATIENT NAME</th>
+           <th scope="col">BLOOD TYPE</th>
+           <th scope="col">DATE</th>
+           <th scope="col">N0.OF UNITS</th>
+           <th scope="col">PHONE NUMBER</th>
+           <th scope="col">HOSPITAL DETAILS</th>
+           <th scope="col">STATUS</th>
+
+
+
+
+       </tr>
+       {% for i in data %}
+       <tr >
+           <td>{{forloop.counter}}</td>
+           <td>{{i.Patient_name}}</td>
+            <td>{{i.BloodType}}</td>
+           <td>{{i.date_field}}</td>
+           <td>{{i.no_of_units}}</td>
+           <td>{{i.Phone_No}}</td>
+           <td>{{i.Hsptl_details }}</td>
+           <td>
+                {% if i.Approval_status == 0 %}
+                 <button class="btn btn-secondary">Pending</button>
+               {% elif i.Approval_status == 1 %}
+               <button class="btn btn-success">Approved</button>
+                {% elif i.Approval_status == 2 %}
+                <button class="btn btn-danger">Rejected</button>
+               {% else %}
+               <button class="btn btn-secondary" onclick="openPopup('{{ i.Donar_Name }}', '{{ i.Donar_Age }}', '{{ i.Donar_BloodType }}', '{{ i.Donar_Location }}', '{{ i.Donar_Number }}')">
+    {{ i.Donar_Name }} Accepted
+</button>
+               {% endif %}
+            </td>
+
+
+
+       </tr>
+       {% endfor %}
+   </table>
+  <div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Donor Information</h2>
+        <p><strong>Name:</strong> <span id="donorName"></span></p>
+        <p><strong>Age:</strong> <span id="donorAge"></span></p>
+        <p><strong>Blood Type:</strong> <span id="donorBloodType"></span></p>
+        <p><strong>Location:</strong> <span id="donorLocation"></span></p>
+        <p><strong>Contact Number:</strong> <span id="donorNumber"></span></p>
+    </div>
+</div>
+   <script>
+       function openPopup(name, age, bloodType, location, number) {
+    document.getElementById('donorName').textContent = name;
+    document.getElementById('donorAge').textContent = age;
+    document.getElementById('donorBloodType').textContent = bloodType;
+    document.getElementById('donorLocation').textContent = location;
+    document.getElementById('donorNumber').textContent = number;
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+    </script>
+
+
+{% endblock %}
